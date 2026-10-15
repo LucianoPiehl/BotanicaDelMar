@@ -1,6 +1,6 @@
 # Botanica del Mar Site
 
-Sistema web para Botanica del Mar con tienda publica, panel interno y backend Node.js. Desarrollo realizado con asistencia de IA y revision del funcionamiento por el autor.
+Sistema web para Botanica del Mar con tienda publica, panel interno y backend Node.js.
 
 ## Arquitectura
 
@@ -137,4 +137,5 @@ El catalogo base se genera desde:
 Si cambian esos PDFs:
 
 - `python tools\build_biocom_catalog.py`
+
 
