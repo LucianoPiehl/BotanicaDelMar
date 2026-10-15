@@ -1,0 +1,11 @@
+.env
+data/runtime/
+node_modules/
+.edge-profile/
+npm-debug.log*
+
+.env.*
+!.env.example
+*.log
+*.txt
+__pycache__/

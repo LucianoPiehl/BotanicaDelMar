@@ -1,0 +1,36 @@
+services:
+  botanica-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: botanica-del-mar-app
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      HOST: ${HOST:-0.0.0.0}
+      PORT: ${PORT:-8080}
+      BOTANICA_DB_PATH: ${BOTANICA_DB_PATH:-/data/database.json}
+    volumes:
+      - botanica_data:/data
+
+  botanica-caddy:
+    image: caddy:2.10-alpine
+    container_name: botanica-del-mar-caddy
+    restart: unless-stopped
+    depends_on:
+      - botanica-app
+    env_file:
+      - .env
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  botanica_data:
+  caddy_data:
+  caddy_config:

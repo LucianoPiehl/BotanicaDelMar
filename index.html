@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Botanica del Mar | Tienda mayorista</title>
+  <meta
+    name="description"
+    content="Botanica del Mar distribuye cosmética natural para negocios que quieren ofrecer bienestar, ritual y cuidado cotidiano."
+  >
+  <link rel="stylesheet" href="./index.css?v=20260630-hero-copy">
+</head>
+<body>
+  <div class="page-grain" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <p>Distribución mayorista en Pinamar, Ostende, Cariló, Madariaga, Villa Gesell, Valeria, Mar de Ajó, San Bernardo, Santa Teresita y San Clemente.</p>
+      <div class="topbar__contact">
+        <a href="tel:+5492254632388">+54 9 2254 63-2388</a>
+        <span>Atención comercial directa</span>
+      </div>
+    </div>
+  </header>
+
+  <header class="site-header" id="inicio">
+    <div class="site-header__inner">
+      <a class="brand" href="#inicio" aria-label="Volver al inicio">
+        <img class="brand__mark" src="./assets/logo-header.webp" alt="" width="96" height="96" fetchpriority="high">
+        <span class="brand__label eyebrow">Distribución mayorista</span>
+      </a>
+
+      <button class="menu-toggle" type="button" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menú">
+        <span class="menu-toggle__label">Menú</span>
+        <svg class="menu-toggle__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4 7h16M4 12h16M4 17h16"></path>
+        </svg>
+      </button>
+
+      <div class="site-header__panel" id="mainNav">
+        <a class="brand brand--mobile" href="#inicio" aria-label="Volver al inicio">
+          <img class="brand__mark" src="./assets/logo-header.webp" alt="" width="96" height="96">
+          <span class="brand__label eyebrow">Distribución mayorista</span>
+        </a>
+
+        <div class="site-header__coupon" id="headerCoupon" data-tone="muted">
+          <input
+            id="couponInput"
+            type="text"
+            placeholder="BOTANICA"
+            autocomplete="off"
+            autocapitalize="characters"
+            spellcheck="false"
+            maxlength="20"
+            aria-label="Ingresar cupón de descuento"
+          >
+          <button class="button button--cart site-header__coupon-button" type="button" id="couponRedeem">Canjear</button>
+          <small class="sr-only" id="couponFeedback" aria-live="polite"></small>
+        </div>
+
+        <div class="site-header__actions">
+          <a class="button button--ghost" href="#contacto">Atención comercial</a>
+          <button class="button button--cart" type="button" id="cartToggle">
+            Carrito <span id="cartCount">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__shell">
+        <div class="hero__copy" data-reveal style="--reveal-delay: 40ms;">
+          <span class="eyebrow">Cosmética natural mayorista</span>
+          <p class="hero__kicker">
+            Selección botánica para perfumerías, gabinetes y espacios de bienestar que buscan fórmulas nobles, texturas agradables y una identidad serena.
+          </p>
+          <h1>Botanica del Mar acerca cosmética natural pensada para piel, ritual y bienestar cotidiano.</h1>
+          <p class="hero__lead">
+            Una selección cuidada de limpieza, tratamiento e hidratación para negocios que quieren transmitir bienestar desde el primer contacto.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#catalogo">Descubrir la línea</a>
+            <a class="button button--ghost" href="#contacto">¡Contáctanos!</a>
+          </div>
+          <div class="hero__notes">
+            <article class="hero__note">
+              <strong>Rituales de cuidado</strong>
+              <span>Productos pensados para limpieza, preparación y tratamiento de la piel.</span>
+            </article>
+            <article class="hero__note">
+              <strong>Texturas nobles</strong>
+              <span>Fórmulas que comunican suavidad, sensorialidad y constancia de uso.</span>
+            </article>
+            <article class="hero__note">
+              <strong>Acompañamiento cercano</strong>
+              <span>Surtido, combinaciones y seguimiento comercial para cada punto de venta.</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="studio-section">
+      <div class="studio-section__grid">
+        <article class="studio-section__intro" data-reveal style="--reveal-delay: 20ms;">
+          <span class="eyebrow">Universo de marca</span>
+          <h2>Cuando una marca de cosmética se siente suave, coherente y confiable, también se vuelve más deseable.</h2>
+          <p>
+            Botanica del Mar acompaña negocios que quieren ofrecer una experiencia de cuidado sensible, con productos que hablan de bienestar antes que de ruido comercial.
+          </p>
+        </article>
+
+        <div class="studio-section__panels">
+          <article class="studio-panel" data-reveal style="--reveal-delay: 90ms;">
+            <span class="studio-panel__index">01</span>
+            <strong>Limpieza y preparación</strong>
+            <p>Micelares, emulsiones, geles y lociones para abrir cualquier rutina con sensación de frescura y orden.</p>
+          </article>
+          <article class="studio-panel" data-reveal style="--reveal-delay: 160ms;">
+            <span class="studio-panel__index">02</span>
+            <strong>Tratamiento y nutrición</strong>
+            <p>Serums, cremas, máscaras y protectores que elevan la experiencia de cuidado en cabina o punto de venta.</p>
+          </article>
+          <article class="studio-panel" data-reveal style="--reveal-delay: 230ms;">
+            <span class="studio-panel__index">03</span>
+            <strong>Surtido con identidad</strong>
+            <p>Una selección pensada para negocios que quieren vender bienestar, ritual y cercanía desde la cosmética.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog-section" id="catalogo">
+      <div class="section-heading" data-reveal style="--reveal-delay: 20ms;">
+        <h2>Catálogo de productos</h2>
+        <p class="catalog-disclaimer">
+          Las imágenes son de carácter ilustrativo. El producto entregado será equivalente en marca, contenido, cantidad y características.
+        </p>
+      </div>
+
+      <section class="pack-section" id="packOffersSection" hidden>
+        <div class="pack-section__heading">
+          <div>
+            <span class="eyebrow">Combinaciones sugeridas</span>
+            <h3>Packs pensados para rituales completos</h3>
+          </div>
+        </div>
+        <div class="pack-grid" id="packOffersGrid"></div>
+      </section>
+
+      <div class="brand-switcher" id="brandSwitcher"></div>
+
+      <div class="catalog-layout">
+        <aside class="catalog-sidebar" data-reveal style="--reveal-delay: 60ms;">
+          <div class="sidebar-card" data-reveal style="--reveal-delay: 80ms;">
+            <span class="eyebrow">Tipos de producto</span>
+            <div class="category-nav" id="categoryNav"></div>
+          </div>
+
+          <div class="sidebar-card" data-reveal style="--reveal-delay: 130ms;">
+            <span class="eyebrow">Buscar</span>
+            <label class="field">
+              <span>Nombre, activo o presentación</span>
+              <input id="searchInput" type="search" placeholder="Ej. niacinamida, hialurónico, 250 cc">
+            </label>
+          </div>
+
+          <div class="sidebar-card" data-reveal style="--reveal-delay: 180ms;">
+            <span class="eyebrow">Orden</span>
+            <label class="field">
+              <span>Ordenar por</span>
+              <select id="sortSelect">
+                <option value="recommended">Recomendados</option>
+                <option value="price-asc">Precio menor a mayor</option>
+                <option value="price-desc">Precio mayor a menor</option>
+                <option value="name-asc">Nombre A-Z</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="sidebar-card sidebar-card--accent" data-reveal style="--reveal-delay: 230ms;">
+            <strong>Atención comercial</strong>
+            <p>Si quieres armar un surtido más coherente para cabina, local o reventa, te ayudamos a combinar limpieza, tratamiento e hidratación.</p>
+            <a class="button button--secondary button--full" href="https://wa.me/5492254632388" target="_blank" rel="noreferrer">
+              Hablar por WhatsApp
+            </a>
+          </div>
+        </aside>
+
+        <div class="catalog-main">
+          <div class="catalog-toolbar" data-reveal style="--reveal-delay: 80ms;">
+            <div>
+              <span class="eyebrow">Catálogo</span>
+              <h2>Productos disponibles</h2>
+            </div>
+            <div class="catalog-summary" id="catalogSummary"></div>
+          </div>
+
+          <div class="active-filters" id="activeFilters"></div>
+          <div class="product-grid" id="productGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contacto">
+      <div class="contact-card contact-card--single" data-reveal style="--reveal-delay: 20ms;">
+        <div class="contact-card__copy" data-reveal style="--reveal-delay: 80ms;">
+          <span class="eyebrow">Contacto</span>
+          <h2>Botanica del Mar acompaña negocios que quieren vender bienestar, sensorialidad y cuidado cotidiano.</h2>
+          <p>
+            Estamos cerca para ayudarte a elegir líneas, equilibrar el surtido y sostener una propuesta de cosmética natural que se sienta coherente con tu marca.
+          </p>
+        </div>
+
+        <div class="contact-card__details" data-reveal style="--reveal-delay: 150ms;">
+          <ul class="contact-list">
+            <li><strong>WhatsApp</strong><a href="https://wa.me/5492254632388" target="_blank" rel="noreferrer">+54 9 2254 63-2388</a></li>
+            <li><strong>Instagram</strong><a href="https://www.instagram.com/botanica_del_mar/" target="_blank" rel="noreferrer">@botanica_del_mar</a></li>
+            <li><strong>Facebook</strong><a href="https://www.facebook.com/profile.php?id=61590775273018" target="_blank" rel="noreferrer">Botanica del Mar</a></li>
+          </ul>
+
+          <div class="contact-actions">
+            <a class="button button--secondary" href="https://wa.me/5492254632388" target="_blank" rel="noreferrer">Hablar por WhatsApp</a>
+            <a class="button button--ghost" href="https://www.instagram.com/botanica_del_mar/" target="_blank" rel="noreferrer">Ver Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__brand" data-reveal style="--reveal-delay: 20ms;">
+      <strong>Botanica del Mar</strong>
+      <p>Cosmética natural mayorista para espacios que quieren ofrecer bienestar, textura y cuidado con identidad propia.</p>
+      <span class="site-footer__signature">Piel, ritual y fórmulas nobles.</span>
+    </div>
+    <div class="site-footer__column" data-reveal style="--reveal-delay: 80ms;">
+      <span class="site-footer__title">Explorar</span>
+      <a href="#inicio">Inicio</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <div class="site-footer__column" data-reveal style="--reveal-delay: 140ms;">
+      <span class="site-footer__title">Canales</span>
+      <a href="https://wa.me/5492254632388" target="_blank" rel="noreferrer">WhatsApp</a>
+      <a href="https://www.instagram.com/botanica_del_mar/" target="_blank" rel="noreferrer">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=61590775273018" target="_blank" rel="noreferrer">Facebook</a>
+    </div>
+    <div class="site-footer__column" data-reveal style="--reveal-delay: 200ms;">
+      <span class="site-footer__title">Legal</span>
+      <a href="./legal.html">Términos y privacidad</a>
+      <a href="./envios.html">Envíos y devoluciones</a>
+      <a href="./arrepentimiento.html">Botón de arrepentimiento</a>
+    </div>
+  </footer>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-labelledby="cartTitle">
+    <div class="cart-drawer__header">
+      <div>
+        <span class="eyebrow">Pedido</span>
+        <h2 id="cartTitle">Carrito mayorista</h2>
+      </div>
+      <div class="cart-drawer__actions">
+        <button class="button button--ghost cart-drawer__clear" type="button" id="cartClear">Vaciar carrito</button>
+        <button class="icon-button" type="button" id="cartClose" aria-label="Cerrar carrito">&times;</button>
+      </div>
+    </div>
+
+    <div class="cart-drawer__body">
+      <div class="cart-success" id="cartSuccess" hidden></div>
+
+      <section class="cart-panel" aria-label="Productos agregados">
+        <div class="cart-panel__heading">
+          <span class="eyebrow">Productos</span>
+          <strong>Tu pedido</strong>
+        </div>
+
+        <div class="cart-items" id="cartItems"></div>
+
+        <div class="cart-summary">
+          <div class="cart-summary__row">
+            <span>Subtotal</span>
+            <strong id="cartSubtotal">$0</strong>
+          </div>
+          <div class="cart-summary__row" id="cartSavingsWrap" hidden>
+            <span>Ahorro total</span>
+            <strong id="cartSavings">$0</strong>
+          </div>
+          <div class="cart-summary__discounts" id="cartDiscountList"></div>
+          <div class="cart-summary__row cart-summary__row--total">
+            <span>Total del pedido</span>
+            <strong id="cartTotal">$0</strong>
+          </div>
+          <p>Revisa productos, cantidades, promociones y cupones antes de finalizar.</p>
+        </div>
+      </section>
+
+      <form class="checkout-form" id="checkoutForm" aria-label="Datos para finalizar pedido">
+        <div class="checkout-form__header">
+          <span class="eyebrow">Finalizar pedido</span>
+          <strong>Datos de contacto</strong>
+        </div>
+
+        <div class="checkout-fields">
+          <label class="field">
+            <span>Nombre completo</span>
+            <input id="checkoutName" type="text" placeholder="Quién realiza el pedido" required>
+          </label>
+          <label class="field">
+            <span>Teléfono</span>
+            <input id="checkoutPhone" type="tel" placeholder="Ej. 2254 63 2388" required>
+          </label>
+          <label class="field">
+            <span>Email</span>
+            <input id="checkoutEmail" type="email" placeholder="mail@ejemplo.com" required>
+          </label>
+          <label class="field">
+            <span>Localidad</span>
+            <select id="checkoutLocation" required>
+              <option value="">Elegir localidad</option>
+              <option value="Pinamar">Pinamar</option>
+              <option value="Ostende">Ostende</option>
+              <option value="Carilo">Cariló</option>
+              <option value="Madariaga">Madariaga</option>
+              <option value="Villa Gesell">Villa Gesell</option>
+              <option value="Valeria">Valeria</option>
+              <option value="Mar de Ajo">Mar de Ajó</option>
+              <option value="San Bernardo">San Bernardo</option>
+              <option value="Santa Teresita">Santa Teresita</option>
+              <option value="San Clemente">San Clemente</option>
+            </select>
+          </label>
+          <label class="field field--full">
+            <span>Dirección</span>
+            <input id="checkoutAddress" type="text" placeholder="Empezá a escribir calle y número" minlength="6" pattern=".*[0-9].*" title="Ingresa una dirección real con calle y número." autocomplete="off" required>
+            <div class="address-suggestions" id="addressSuggestions" hidden></div>
+            <small class="address-status" id="addressStatus">Elegí una dirección sugerida para que podamos verificar la entrega.</small>
+          </label>
+          <label class="field field--full">
+            <span>Observaciones</span>
+            <textarea id="checkoutNotes" rows="4" placeholder="Horarios, dudas, condiciones especiales, etc."></textarea>
+          </label>
+        </div>
+
+        <button class="button button--primary button--full" type="submit">
+          Finalizar pedido
+        </button>
+      </form>
+    </div>
+  </aside>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden></div>
+  <section class="product-modal" id="productModal" hidden aria-live="polite">
+    <button class="icon-button product-modal__close" type="button" id="productClose" aria-label="Cerrar detalle">&times;</button>
+    <div class="product-modal__image">
+      <img id="productModalImage" src="" alt="">
+      <div class="product-modal__pack-gallery" id="productModalPackGallery" hidden></div>
+    </div>
+    <div class="product-modal__content" id="productModalContent"></div>
+  </section>
+
+  <button class="floating-cart" type="button" id="floatingCartToggle" aria-label="Abrir carrito">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M7 18.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm10 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3ZM5.2 5l1.4 8.1A2.4 2.4 0 0 0 9 15.1h7.2a2.4 2.4 0 0 0 2.3-1.7l1.6-5.2A1 1 0 0 0 19.2 7H7.1L6.7 4.7A2 2 0 0 0 4.7 3H3.5a1 1 0 1 0 0 2h1.7Zm2.2 4h10.4l-1.1 3.8a.4.4 0 0 1-.4.3H9a.4.4 0 0 1-.4-.3L7.4 9Z"/>
+    </svg>
+    <span id="floatingCartCount">0</span>
+  </button>
+
+  <a class="floating-wa" href="https://wa.me/5492254632388" target="_blank" rel="noreferrer" aria-label="Escribir por WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M19.11 17.21c-.27-.14-1.58-.78-1.82-.87-.24-.09-.42-.14-.6.14-.18.27-.69.87-.85 1.05-.16.18-.31.2-.58.07-.27-.14-1.12-.41-2.14-1.31-.79-.71-1.33-1.58-1.49-1.85-.16-.27-.02-.42.12-.56.12-.12.27-.31.4-.47.13-.16.18-.27.27-.45.09-.18.04-.34-.02-.47-.07-.14-.6-1.45-.82-1.98-.22-.53-.43-.45-.6-.46l-.51-.01c-.18 0-.47.07-.71.34-.24.27-.93.91-.93 2.23s.96 2.59 1.09 2.77c.13.18 1.88 2.86 4.55 4.01.64.28 1.14.44 1.53.56.64.2 1.21.17 1.67.1.51-.08 1.58-.64 1.8-1.26.22-.62.22-1.16.16-1.27-.07-.11-.25-.18-.52-.31z"/>
+      <path fill="currentColor" d="M16.01 3.2c-7.05 0-12.77 5.72-12.77 12.77 0 2.25.59 4.45 1.72 6.38L3.2 28.8l6.61-1.73a12.73 12.73 0 0 0 6.2 1.6h.01c7.04 0 12.78-5.73 12.78-12.78 0-3.42-1.33-6.64-3.75-9.06A12.68 12.68 0 0 0 16.01 3.2zm0 23.31h-.01a10.62 10.62 0 0 1-5.41-1.49l-.39-.23-3.92 1.03 1.05-3.82-.25-.4a10.63 10.63 0 1 1 8.93 4.91z"/>
+    </svg>
+    <span>WhatsApp</span>
+  </a>
+
+  <noscript>Necesitas habilitar JavaScript para usar el carrito y el checkout.</noscript>
+  <script src="https://www.mercadopago.com/v2/security.js" view="checkout"></script>
+  <script type="module" src="./app.js?v=20260630-hero-copy"></script>
+</body>
+</html>

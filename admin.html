@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Botanica del Mar | Panel interno</title>
+  <meta
+    name="description"
+    content="Panel interno de Botanica del Mar para configuracion comercial, pedidos y metricas."
+  >
+  <link rel="stylesheet" href="./admin.css?v=20260630-offers-manager">
+</head>
+<body>
+  <div class="page-grain" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <p>Panel interno de Botanica del Mar. Uso administrativo solamente.</p>
+      <div class="topbar__contact">
+        <span>Privado</span>
+        <span>No compartir con clientes</span>
+      </div>
+    </div>
+  </header>
+
+  <header class="admin-header" id="inicio">
+    <div class="admin-header__inner">
+      <a class="admin-brand" href="#inicio" aria-label="Volver al inicio del panel">
+        <img class="admin-brand__logo" src="./assets/logo-instagram.png" alt="Logo Botanica del Mar">
+        <div class="admin-brand__text">
+          <span class="eyebrow">Panel interno</span>
+          <strong>Botanica del Mar</strong>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Panel">
+        <a href="#configuracion">Configuracion</a>
+        <a href="#metricas">Metricas</a>
+        <a href="#pedidos">Pedidos</a>
+      </nav>
+
+      <div class="admin-header__actions">
+        <button class="button button--ghost" type="button" id="logoutButton" hidden>Cerrar sesion</button>
+        <a class="button button--ghost" href="./index.html">Ver tienda publica</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="admin-auth" id="adminAuth" hidden>
+      <div class="admin-auth__card">
+        <span class="eyebrow" id="authEyebrow">Acceso interno</span>
+        <h1 id="authTitle">Ingresar al panel</h1>
+        <p id="authDescription">Este panel permite modificar precios y pedidos. Inicia sesion para continuar.</p>
+
+        <form class="config-form" id="authForm">
+          <label class="field">
+            <span>Usuario</span>
+            <input id="authUsername" type="text" autocomplete="username" required>
+          </label>
+          <label class="field">
+            <span>Contrasena</span>
+            <input id="authPassword" type="password" autocomplete="current-password" required>
+          </label>
+          <button class="button button--primary" type="submit" id="authSubmit">Ingresar</button>
+        </form>
+
+        <p class="panel-note" id="authFeedback"></p>
+      </div>
+    </section>
+
+    <section class="panel-section" id="configuracion" hidden>
+      <div class="section-heading">
+        <span class="eyebrow">Administracion</span>
+        <h1>Configuracion y seguimiento comercial</h1>
+        <p>
+          Este espacio queda separado de la tienda publica. Desde aca puedes ajustar el recargo comercial,
+          revisar pedidos guardados y ver un resumen rapido del movimiento.
+        </p>
+      </div>
+
+      <div class="panel-grid">
+        <article class="panel-card">
+          <div class="panel-card__header">
+            <div>
+              <span class="eyebrow">Configuracion</span>
+              <h3>Margen comercial</h3>
+            </div>
+          </div>
+
+          <form class="config-form" id="markupForm">
+            <label class="field">
+              <span>Porcentaje sobre Precio Final</span>
+              <input id="markupInput" type="number" min="0" step="1" inputmode="numeric" required>
+            </label>
+            <button class="button button--primary" type="submit">Guardar porcentaje</button>
+          </form>
+
+          <p class="panel-note">
+            Este ajuste impacta en los precios mostrados en la tienda, pero el cliente no ve ni el porcentaje
+            ni la logica interna.
+          </p>
+        </article>
+
+        <article class="panel-card" id="metricas">
+          <div class="panel-card__header">
+            <div>
+              <span class="eyebrow">Metricas</span>
+              <h3>Resumen comercial</h3>
+            </div>
+          </div>
+          <div class="metric-grid" id="metricGrid"></div>
+          <p class="panel-note">
+            Estas metricas se calculan con los pedidos guardados en el sistema y se actualizan desde el backend.
+          </p>
+        </article>
+      </div>
+
+      <article class="panel-card panel-card--full" id="promociones">
+        <div class="panel-card__header">
+          <div>
+            <span class="eyebrow">Promociones</span>
+            <h3>Ofertas, packs y cupones</h3>
+          </div>
+          <button class="button button--primary" type="button" id="offersSaveButton">Guardar promociones</button>
+        </div>
+
+        <p class="panel-note">
+          Desde aqui puedes crear las promociones que ve el cliente en la tienda y las que impactan en el total del pedido.
+        </p>
+        <p class="panel-note panel-note--feedback" id="offersFeedback"></p>
+
+        <div class="offers-layout">
+          <section class="offer-group">
+            <div class="offer-group__header">
+              <div>
+                <span class="eyebrow">Compra total</span>
+                <h4>Descuento por compra</h4>
+              </div>
+              <button class="button button--ghost" type="button" id="addPurchaseDiscount">Agregar</button>
+            </div>
+            <div class="offer-list" id="purchaseDiscountList"></div>
+          </section>
+
+          <section class="offer-group">
+            <div class="offer-group__header">
+              <div>
+                <span class="eyebrow">Productos</span>
+                <h4>Descuentos especificos</h4>
+              </div>
+              <button class="button button--ghost" type="button" id="addProductDiscount">Agregar</button>
+            </div>
+            <div class="offer-list" id="productDiscountList"></div>
+          </section>
+
+          <section class="offer-group offer-group--wide">
+            <div class="offer-group__header">
+              <div>
+                <span class="eyebrow">Packs</span>
+                <h4>Packs destacados</h4>
+              </div>
+              <button class="button button--ghost" type="button" id="addPackOffer">Agregar pack</button>
+            </div>
+
+            <label class="offer-toggle">
+              <input type="checkbox" id="packSectionVisible">
+              <span>Mostrar la seccion de packs antes del catalogo</span>
+            </label>
+
+            <div class="offer-list" id="packOfferList"></div>
+          </section>
+
+          <section class="offer-group">
+            <div class="offer-group__header">
+              <div>
+                <span class="eyebrow">Cupones</span>
+                <h4>Cupones canjeables</h4>
+              </div>
+              <button class="button button--ghost" type="button" id="addCoupon">Agregar</button>
+            </div>
+            <div class="offer-list" id="couponList"></div>
+          </section>
+        </div>
+      </article>
+
+      <div class="panel-grid panel-grid--secondary">
+        <article class="panel-card">
+          <div class="panel-card__header">
+            <div>
+              <span class="eyebrow">Rotacion</span>
+              <h3>Productos mas pedidos</h3>
+            </div>
+          </div>
+          <div class="top-products" id="topProducts"></div>
+        </article>
+
+        <article class="panel-card" id="pedidos">
+          <div class="panel-card__header">
+            <div>
+              <span class="eyebrow">Pedidos</span>
+              <h3>Seguimiento operativo</h3>
+            </div>
+          </div>
+
+          <p class="panel-note">
+            Cada pedido pagado puede reenviarse desde aqui por el canal operativo activo. Si falla, veras el motivo exacto del ultimo intento.
+          </p>
+
+          <p class="orders-empty" id="ordersEmpty">
+            Todavia no hay pedidos registrados en el sistema.
+          </p>
+
+          <div class="orders-table-wrap" id="ordersTableWrap" hidden>
+            <table class="orders-table">
+              <thead>
+                <tr>
+                  <th>Pedido</th>
+                  <th>Cliente</th>
+                  <th>Detalle</th>
+                  <th>Total</th>
+                  <th>Estado</th>
+                  <th>Aviso</th>
+                </tr>
+              </thead>
+              <tbody id="ordersTableBody"></tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <noscript>Necesitas habilitar JavaScript para usar el panel administrativo.</noscript>
+  <script type="module" src="./admin.js?v=20260630-offers-manager"></script>
+</body>
+</html>

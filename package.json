@@ -1,0 +1,20 @@
+{
+  "name": "botanica-del-mar",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server/server.js",
+    "normalize:images": "node tools/normalize_product_images.js",
+    "check": "node --check server/server.js && node --check app.js && node --check admin.js && node --check store-common.js && node --check api-client.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "nodemailer": "^9.0.1"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.2"
+  }
+}
